@@ -1,0 +1,36 @@
+
+.hidden {
+	display: none;
+}
+body {
+	background: #4ac84a;
+}
+div.main {
+	margin: 5%;
+	margin-top: 15%;
+	transform: translateY(-50%);
+	position: relative;
+	display: block;
+	text-align: center;
+}
+.main h1 {
+	text-align: center;
+	color: white;
+	text-shadow: 0 0 0.5em black;
+	font-family: verdana;
+	font-size: 4em;
+}
+.button {
+	display: inline-block;
+	padding: 0.75em;
+	background: white;
+	margin: 1em;
+	border-radius: 0.5em;
+	box-shadow: 0 0 0.5em black;
+	cursor: pointer;
+	transition: background-color 0.5s, color 0.5s;
+}
+.button:hover {
+	background: #4ac84a;
+	color: white;
+}

@@ -1,1 +1,16 @@
-
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Quizbot Quiz Creator</title>
+		<link rel="stylesheet" href="index.css"/>
+	</head>
+	<body>
+		<div class="main">
+			<h1>Quiz Creator</h1>
+			<div class="button" onclick="document.querySelector('input[type=file]').click()">Open Quiz</div><div class="button" onclick="newQuiz()">Create New Quiz</div><div class="button hidden" onclick="window.location = 'editQuiz/editquiz.html'">Reopen<br /><sub></sub></div>
+			<input type="file" class="hidden" accept=".json" />
+			<script src="index.js"></script>
+		</div>
+	</body>
+</html>

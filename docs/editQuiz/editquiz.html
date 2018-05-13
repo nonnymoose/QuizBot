@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Edit Quiz</title>
+		<link rel="stylesheet" href="editquiz.css" />
+	</head>
+	<body>
+		<div class="overlay">
+			<div class="error">
+				<img src="broken.png" />
+				<p class="error"></p>
+			</div>
+		</div>
+		<div class="content">
+			<div class="settings">
+				<h1><input type="text" placeholder="Quiz Name" oninput="changeName(this)"/><div contenteditable class="description" style="display: inline-block;font-size: 0.5em;width: 100%;" oninput="changeDesc(this)">Quiz Description</div></h1><br />
+				<span class="setting boolean" data-property="shuffle">
+					<input type="checkbox" oninput="update(this)" />Shuffle
+					<span class="help">?⃝<span class="tooltip">Whether or not the question order should be randomized.</span></span>
+				</span>
+				<span class="setting boolean" data-property="reversable">
+					<input type="checkbox" oninput="update(this)" />Reversable
+					<span class="help">?⃝<span class="tooltip">Whether or not the questions and answers should be randomly switched (good for Quizlets).</span></span>
+				</span>
+				<span class="setting number" data-property="time">
+					Time<input type="number" oninput="update(this)" />
+					<span class="help">?⃝<span class="tooltip">How much time the player is given to answer the question.</span></span>
+				</span>
+				<span class="setting number" data-property="penalty">
+					Penalty<input type="number" oninput="update(this)" />
+					<span class="help">?⃝<span class="tooltip">How many points to deduct for an incorrect answer.</span></span>
+				</span>
+				<span class="setting boolean" data-property="case">
+					<input type="checkbox" oninput="update(this)" />Case Sensitive
+					<span class="help">?⃝<span class="tooltip">Whether or not the answer is <a href="https://en.wikipedia.org/wiki/Case_sensitivity">case-sensitive</a>.</span></span>
+				</span>
+				<span class="setting text" data-property="otherchars">
+					Ignore Characters<input type="text" oninput="update(this)" />
+					<span class="help">?⃝<span class="tooltip">Symbols/characters to ignore in the response (ex. spaces). No seperator required.</span></span>
+				</span>
+			</div>
+			<!-- <div class="question">
+				<h2>Question</h2>
+				<div contenteditable class="text"></div>
+				<h2>Answer</h2>
+				<div contenteditable class="answer"></div>
+				<span class="settings-toggle button" onclick="expandthis(this)">Additional Options <span class="dropdown-arrow">›</span></span>
+				<div class="settings" style="height:0;">
+					<span class="setting boolean" data-property="shuffle">
+						<input type="checkbox" oninput="update(this)" />Shuffle
+						<span class="help">?⃝<span class="tooltip">Whether or not the question order should be randomized.</span></span>
+					</span>
+					<span class="setting boolean" data-property="reversable">
+						<input type="checkbox" oninput="update(this)" />Reversable
+						<span class="help">?⃝<span class="tooltip">Whether or not the questions and answers should be randomly switched (good for Quizlets).</span></span>
+					</span>
+					<span class="setting number" data-property="time">
+						Time<input type="number" oninput="update(this)" />
+						<span class="help">?⃝<span class="tooltip">How much time the player is given to answer the question.</span></span>
+					</span>
+					<span class="setting number" data-property="penalty">
+						Penalty<input type="number" oninput="update(this)" />
+						<span class="help">?⃝<span class="tooltip">How many points to deduct for an incorrect answer.</span></span>
+					</span>
+					<span class="setting boolean" data-property="case">
+						<input type="checkbox" oninput="update(this)" />Case Sensitive
+						<span class="help">?⃝<span class="tooltip">Whether or not the answer is <a href="https://en.wikipedia.org/wiki/Case_sensitivity">case-sensitive</a>.</span></span>
+					</span>
+					<span class="setting text" data-property="otherchars">
+						Ignore Characters<input type="text" oninput="update(this)" />
+						<span class="help">?⃝<span class="tooltip">Symbols/characters to ignore in the response (ex. spaces). No seperator required.</span></span>
+					</span>
+				</div>
+				<div class="add button" onclick="addq(this)">✚</div>
+				<div class="delete button" onclick="deleteq(this)">🗑</div>
+			</div> -->
+		</div>
+		<span class="save button" onclick="saveas()">💾</span>
+		<span class="home button" onclick="returnHome()"></span>
+		<a style="display: none;" id="dla"></a>
+		<script defer src="editquiz.js"></script>
+	</body>
+</html>
