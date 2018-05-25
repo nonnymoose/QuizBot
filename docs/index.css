@@ -34,3 +34,9 @@ div.main {
 	background: #4ac84a;
 	color: white;
 }
+
+.buttonoptions {
+	height: 0;
+	overflow: hidden;
+	transition: height 0.5s;
+}

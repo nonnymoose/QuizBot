@@ -8,9 +8,11 @@
 	<body>
 		<div class="main">
 			<h1>Quiz Creator</h1>
-			<div class="button" onclick="document.querySelector('input[type=file]').click()">Open Quiz</div><div class="button" onclick="newQuiz()">Create New Quiz</div><div class="button hidden" onclick="window.location = 'editQuiz/editquiz.html'">Reopen<br /><sub></sub></div>
+			<div class="button" onclick="document.querySelector('input[type=file]').click()">Open Quiz</div><div class="button" onclick="newQuiz()">Create New Quiz</div><div class="button hidden" onclick="window.location = 'editQuiz/editquiz.html'">Reopen<br /><sub></sub></div><br />
+			<div class="button quizlet"><span class="buttonlabel" onclick="importquizlet();">Import quizlet</span><div class="buttonoptions"><input type="checkbox" />Reverse all questions and answers<br /><input type="text" placeholder="URL"/></div></div>
 			<input type="file" class="hidden" accept=".json" />
 			<script src="index.js"></script>
+			<script src="quizlet.js"></script>
 		</div>
 	</body>
 </html>
